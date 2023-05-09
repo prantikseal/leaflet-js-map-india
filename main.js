@@ -1,6 +1,6 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import indianStates from './Indian_States.json';
+import indianStates from 'https://raw.githubusercontent.com/prantikseal/leaflet-js-map-india/main/Indian_States.json';
 
 // key for maptiler api
 
@@ -84,9 +84,8 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 
+// for geojson
 var myGeoJson = indianStates;
-
-
 L.geoJSON(myGeoJson).addTo(map);
 
 L.control.scale({
